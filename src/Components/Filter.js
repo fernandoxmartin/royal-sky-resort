@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { RoomContext } from "./RoomContext";
 import styled from "styled-components";
 import { VscChromeClose } from "react-icons/vsc";
@@ -8,13 +8,7 @@ const Range = Slider.createSliderWithTooltip(Slider.Range);
 
 const Filter = ({ isOpen, toggleFilter }) => {
   const context = useContext(RoomContext);
-  const [selected, setSelected] = useState("");
-  const {
-    filters,
-    resetDefaultFilters,
-    toggleSelection,
-    filterRooms,
-  } = context;
+  const { filters, resetDefaultFilters, toggleSelection } = context;
 
   const ref1 = useRef();
   const ref2 = useRef();

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, forwardRef } from "react";
+import React, { useState, useContext, forwardRef } from "react";
 import { RoomContext } from "./RoomContext";
 import styled from "styled-components";
 import { BsCalendar } from "react-icons/bs";

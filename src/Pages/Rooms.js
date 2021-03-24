@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { RoomContext } from "../Components/RoomContext";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Filter from "../Components/Filter";
-import { BsFilter } from "react-icons/bs";
 import { BiSliderAlt } from "react-icons/bi";
 
 export const Rooms = () => {
@@ -161,15 +160,4 @@ const RoomDisplay = styled.div`
 `;
 const FilterButton = styled.div`
   cursor: pointer;
-`;
-const Loader = styled.div`
-  height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;

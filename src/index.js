@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import Theme from "./Theme/Theme";
+import { Theme } from "./Theme/Theme";
 import { GlobalStyles } from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";

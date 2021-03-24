@@ -4,14 +4,14 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const Room = () => {
-  const [params, setSlug] = useState(useParams());
+  const [params] = useState(useParams());
   const [room, setRoom] = useState(null);
 
   useEffect(() => {
     getRoom(params.slug).then((res) => {
       setRoom(res[0].fields);
     });
-  }, []);
+  }, [params.slug]);
 
   console.log(room);
 
@@ -20,7 +20,7 @@ const Room = () => {
       {room && (
         <RoomContainer>
           <RoomImage>
-            <img src={room.images[0].fields.file.url} />
+            <img src={room.images[0].fields.file.url} alt="resort room" />
           </RoomImage>
           <RoomDetailContainer>
             <RoomDetail>
